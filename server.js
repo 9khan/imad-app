@@ -24,7 +24,7 @@ var articleOne =
 function createTemplate (date)
 {
     var title = data.title;
-    var data = data.date;
+    var date = data.date;
     var heading = data.heading;
     var content = data.content;
 var htmlTemplate = `
