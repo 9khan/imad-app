@@ -5,6 +5,59 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = 
+{
+    title:'Article One| king khan',
+    heading: 'Article One',
+    date:'9 aug,2017',
+    content: 
+        `<p>
+            This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article 
+        </p>
+        <p>
+            This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article 
+        </p>
+        <p>
+            This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article 
+        </p>`
+};
+function createTemplate (date)
+{
+    var title = data.title;
+    var data = data.date;
+    var heading = data.heading;
+    var content = data.content;
+var htmlTemplate = `
+<html>
+    <head>
+        <title>
+          $(title)
+        </title>
+        <meta name = "viewport" content="width=device-width,initial-scale=1"/> 
+  <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+<body bgcolor=green>
+    <div class="container">
+    <div>
+        <a href="/">home</a>
+    </div>
+    <div>
+        <h2>
+            ${heading}
+        </h2>
+    </div>
+    <div>
+        ${date}
+    </div>
+    <div>
+    ${content}
+    </div>
+    </div>
+    </body>
+</html>
+`;
+return htmlTemplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -14,7 +67,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 app.get('/article-one',function(req,res)
 {
-     res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+     res.sendFile(createTemplate(articleOne));
 }
 );
 app.get('/article-two',function(req,res)
