@@ -21,7 +21,7 @@ var articleOne =
             This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article 
         </p>`
 };
-function createTemplate (date)
+function createTemplate(data)
 {
     var title = data.title;
     var date = data.date;
