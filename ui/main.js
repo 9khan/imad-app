@@ -25,8 +25,6 @@ request.open('GET','http://mohd9khan.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 //submit names
-var nameInput = document.getElementById("name");
-var name = nameInput.value;
 var submit = document.getElementById("submit_btn");
 submit.onclick = function ()
 {
@@ -52,6 +50,8 @@ submit.onclick = function ()
             }
         }
 };
+var nameInput = document.getElementById("name");
+var name = nameInput.value;
 request.open('GET','http://mohd9khan.imad.hasura-app.io/submit-name?name=' + name,true);
 request.send(null);
 };
