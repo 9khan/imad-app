@@ -4,7 +4,7 @@ var element = document.getElementById("main-text");
 element.innerHTML = "THIS IS KING KHAN";
 //moving image
 var img = document.getElementById("king");
-img.onClick = function()
+img.onclick = function()
 {
 img.style.marginLeft = "100px";
 };
