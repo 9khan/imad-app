@@ -1,11 +1,28 @@
+
 //counter code
-var button = document.getElementById("counter");
-var counter = 0;
+var buttton = document.getElementById("counter");
 button.onclick = function ()
 {
-    counter = counter + 1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
+    //create request obj
+    var request = new XMLHttpRequest();
+    // Capture the res and store it in a variable
+    request.onreadystatechange = function ()
+    {
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            //take some action
+            if(request.status === 200)
+            {
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+        }
+    // not done yet
+};
+//make the req
+request.open('GET','http://mohd9khan.imad.hasura-app.io/counter',true);
+request.send(null);
 };
 /*console.log('Loaded!');
 //changing text
