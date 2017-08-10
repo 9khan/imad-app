@@ -22,7 +22,7 @@ var articles =
         <p>
             This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article 
         </p>
-         <input type = "text" id = "commentBox" value = "feedback"/>`
+         feedback<input type = "submit" id = "commentBox" value = "SubmitData"/>`
 },
    'article-two':
    {
