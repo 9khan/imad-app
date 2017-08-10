@@ -52,7 +52,7 @@ submit.onclick = function ()
             }
         }
 };
-request.open('GET','http://mohd9khan.imad.hasura-app.io/submit-name?name= + name',true);
+request.open('GET','http://mohd9khan.imad.hasura-app.io/submit-name?name=' + name,true);
 request.send(null);
 };
 /*console.log('Loaded!');
