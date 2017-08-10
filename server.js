@@ -21,7 +21,8 @@ var articles =
         </p>
         <p>
             This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article This is the first article 
-        </p>`
+        </p>
+         <input type = "text" name = "commentBox" value = "feedback"/>`
 },
    'article-two':
    {
