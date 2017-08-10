@@ -21,7 +21,7 @@ button.onclick = function ()
     // not done yet
 };
 //make the req
-request.open('GET','http://mohd9khan.imad.hasura-app.io/counter',true);
+request.open('GET',"http://mohd9khan.imad.hasura-app.io/counter",true);
 request.send(null);
 };
 /*console.log('Loaded!');
