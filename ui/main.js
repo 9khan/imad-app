@@ -1,5 +1,5 @@
 //counter code
-var buttton = document.getElementById("counter");
+var buttton = document.getElementById('counter');
 button.onclick = function()
 {
     //create request obj
