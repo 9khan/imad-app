@@ -1,6 +1,5 @@
 //counter code
 var buttton = document.getElementById("counter");
-var counter = 0;
 button.onclick = function()
 {
     //create request obj
@@ -21,7 +20,7 @@ button.onclick = function()
     // not done yet
 };
 //make the req
-request.open('GET','http://http://mohd9khan.imad.hasura-app.io/counter',true);
+request.open('GET','http://mohd9khan.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 /*console.log('Loaded!');
